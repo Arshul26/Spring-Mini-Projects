@@ -9,11 +9,13 @@
         <module name="RestaurantApp" />
         <module name="JournalApp" />
         <module name="EmployeeManagerApplication" />
+        <module name="EmployeeManagementDTO" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="EmployeeManagementDTO" options="-parameters" />
       <module name="EmployeeManagerApplication" options="-parameters" />
       <module name="JournalApp" options="-parameters" />
       <module name="RestaurantApp" options="-parameters" />
