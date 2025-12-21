@@ -15,7 +15,7 @@ public class Employee {
 
     private String name;
     private String email;
-    private int salary;
+    private double salary;
 
     public Employee() {}
 
@@ -37,11 +37,11 @@ public class Employee {
         this.name = name;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
