@@ -5,9 +5,11 @@ import com.journal.employeemanagementdto.dto.EmployeeDTO;
 import com.journal.employeemanagementdto.dto.EmployeeResponseDTO;
 import com.journal.employeemanagementdto.entity.Employee;
 import com.journal.employeemanagementdto.repository.EmployeeRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 
 @Service
 public class EmployeeService {
@@ -47,7 +49,7 @@ public class EmployeeService {
     //id → Which employee to update
     //emp → New data sent by the client
     //Returns → Updated Employee entity
-
+    @Transactional
     public EmployeeResponseDTO updateEmployee(Long id, EmployeeDTO dto) {
         //Employee existing = employeeRepository.findById(id).orElseThrow();
         Employee existing = employeeRepository.findById(id)
